@@ -1,6 +1,7 @@
-.velogDesign {
-    font-size: 28px;
-    font-weight: bold;
+
+    .accordion-body {
+        white-space: nowrap;
     }
+
   
 
