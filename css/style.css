@@ -1,7 +1,195 @@
 
-    .accordion-body {
-        white-space: nowrap;
+    /* 기본적인 스타일 설정 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;  /* 페이지 배경색 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 컨테이너 설정 */
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0;
+    padding: 0;
+}
+
+/* 이미지 크기 설정 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 특정 이미지 크기 조정 */
+img[src*="menu ui.png"],
+img[src*="sunny.png"],
+img[src*="icon.png"] {
+    width: 40px;
+    height: 40px;
+}
+
+/* 아코디언 메뉴 스타일 */
+.accordion-button {
+    font-size: 13px;
+    padding: 10px 15px;
+    color: #333;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:focus {
+    border-color: #007bff;  /* 포커스 시 파란색 */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* 포커스시 그림자 */
+}
+
+.accordion-button:hover {
+    background-color: #f1f1f1;  /* 호버 시 배경색 변화 */
+}
+
+.accordion-body {
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+/* 입력 필드와 텍스트영역 스타일 */
+input[type="text"],
+textarea,
+button {
+    width: 100%;
+    max-width: 360px;
+    height: 36px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    padding-top: 10px;
+}
+
+button {
+    width: 100%;
+    max-width: 360px;
+    height: 40px;
+    background-color: #00A7FF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008cce;  /* 버튼 호버시 색상 */
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown-menu {
+    background-color: #fff;
+    width: 100%;
+    max-width: 360px;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #333;
+    width: 100%;
+    max-width: 360px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #f1f1f1;
+}
+
+/* Flexbox 설정 (세로 정렬 및 간격 조정) */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 13px;
+}
+
+a:hover {
+    color: #0056b3;  /* 링크 호버 시 색상 */
+}
+
+/* 여백 설정 */
+.col-12, .col, .row {
+    margin-top: 10px;
+}
+
+/* 수직 구분선 설정 */
+.vr {
+    border-left: 1px solid #ddd;
+    height: 100%;
+    margin: 0 20px;
+}
+
+/* 반응형 디자인 (작은 화면에서 레이아웃 변경) */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 15px;
     }
+
+    input[type="text"],
+    textarea,
+    button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .accordion-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .accordion-body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
 
   
 
